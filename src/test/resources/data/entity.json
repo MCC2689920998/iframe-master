@@ -1,0 +1,127 @@
+{
+  "simple" : {
+    "id" : "123456"
+  },
+  "element_array" : {
+    "phoneNo" : ["11111", "12222"]
+  },
+  "simple_double" : {
+    "value" : 123456
+  },
+  "simple_null" : {
+    "value" : null
+  },
+  "simple_nothing" : {
+  },
+  "embedded" : {
+    "person" : {
+      "id" : "342622199011023452"
+    }
+  },
+  "embedded_array" : {
+    "person" : [{
+      "id" : "342622199011023452"
+    }, {
+      "id" : "342622199011023889"
+    }, {
+      "id" : "342622199011023778"
+    }]
+  },
+  "embedded_arrays" : {
+    "person" : [{
+      "id" : "342622199011023452",
+      "phoneNo" : ["11111", "12222"]
+    }, {
+      "id" : "342622199011023889",
+      "phoneNo" : ["21111", "22222"]
+    }, {
+      "id" : "342622199011023778",
+      "phoneNo" : ["31111", "32222"]
+    }]
+  },
+  "example" : {
+    "person" : [
+      {
+        "id": "310115200001011713",
+        "income": {
+          "month1": {
+            "salary": 1000, "stock": 1000
+          },
+          "month2": {
+            "salary": 1000, "stock": 1000
+          },
+          "month3": {
+            "salary": 1000, "stock": 1000
+          },
+          "month4": {
+            "salary": 1000, "stock": 1000
+          },
+          "month5": {
+            "salary": 1000, "stock": 1000
+          },
+          "month6": {
+            "salary": 1000, "stock": 1000
+          },
+          "month7": {
+            "salary": 1000, "stock": 1000
+          },
+          "month8": {
+            "salary": 1000, "stock": 1000
+          },
+          "month9": {
+            "salary": 1000, "stock": 1000
+          },
+          "month10": {
+            "salary": 1000, "stock": 1000
+          },
+          "month11": {
+            "salary": 1000, "stock": 1000
+          },
+          "month12": {
+            "salary": 1000, "stock": 1000
+          }
+        }
+      },
+      {
+        "id": "310115200001011714",
+        "income": {
+          "month1": {
+            "salary": 2000, "stock": 2000
+          },
+          "month2": {
+            "salary": 2000, "stock": 2000
+          },
+          "month3": {
+            "salary": 2000, "stock": 2000
+          },
+          "month4": {
+            "salary": 2000, "stock": 2000
+          },
+          "month5": {
+            "salary": 2000, "stock": 2000
+          },
+          "month6": {
+            "salary": 2000, "stock": 2000
+          },
+          "month7": {
+            "salary": 2000, "stock": 2000
+          },
+          "month8": {
+            "salary": 2000, "stock": 2000
+          },
+          "month9": {
+            "salary": 2000, "stock": 2000
+          },
+          "month10": {
+            "salary": 2000, "stock": 2000
+          },
+          "month11": {
+            "salary": 2000, "stock": 2000
+          },
+          "month12": {
+            "salary": 2000, "stock": 2000
+          }
+        }
+      }]
+  }
+}

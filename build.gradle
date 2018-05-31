@@ -1,0 +1,58 @@
+group 'com.ppmoney.asset'
+version '0.0.2'
+
+apply plugin: 'java'
+
+repositories {
+    mavenLocal()
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/"}
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/com.alibaba/fastjson
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.47'
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.5'
+
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.14.Final'
+
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.20'
+
+
+    compile group: 'org.springframework', 'name': 'spring-jdbc', version: '5.0.6.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa
+    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.0.7.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.1.RELEASE'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2
+    compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.3.0'
+
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.2'
+
+    testCompile group: 'com.ppmoney.asset', name: 'itest', version: '0.0.2'
+}
+
+// upload jar file to local maven repositories.
+apply plugin: 'maven'
+def localMavenRepo = 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
+task sourceJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: localMavenRepo)
+
+            pom.project {
+                name = project.name
+                packaging = 'jar'
+                description = 'The framework of all other project.'
+            }
+        }
+    }
+}
